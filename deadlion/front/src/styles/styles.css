@@ -1,0 +1,305 @@
+/* ==================== */
+/* ГЛОБАЛЬНО            */
+/* ==================== */
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: 'Marker Felt', 'Marker Felt Thin', fantasy, cursive;
+  background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+  /* мягкий фон всей страницы */
+}
+
+/* ==================== */
+/* BASE — на весь экран */
+/* ==================== */
+.base {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px 20px;
+}
+
+/* ==================== */
+/* FRAME — по центру    */
+/* ==================== */
+.frame {
+  width: 100%;
+  max-width: 600px;
+}
+
+/* ==================== */
+/* HOME HEADER          */
+/* ==================== */
+.home-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.home-header h1 {
+  margin: 0;
+  font-size: 2em;
+  color: #2c3e50;
+}
+
+/* ==================== */
+/* СПИСОК КАРТОЧЕК       */
+/* ==================== */
+.motivations-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.motivation-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.motivation-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+}
+
+.motivation-content {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.motivation-title {
+  font-size: 1.1em;
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+.motivation-descr {
+  color: #555;
+  font-size: 0.9em;
+}
+
+.motivation-details {
+  font-size: 0.8em;
+  color: #888;
+  margin-top: 4px;
+}
+
+/* ==================== */
+/* КНОПКИ ВНИЗУ HOME    */
+/* ==================== */
+.exit-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+/* ==================== */
+/* ОБЩИЕ СТИЛИ КНОПОК   */
+/* ==================== */
+button {
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-family: inherit;
+  font-size: 0.95em;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  color: white;
+  font-weight: bold;
+}
+
+button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+button:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+/* Зелёная кнопка */
+.green-button {
+  background: linear-gradient(135deg, #43e97b, #38f9d7);
+  color: #1a5c3a;
+}
+
+.green-button:hover {
+  background: linear-gradient(135deg, #38f9d7, #43e97b);
+}
+
+/* Синяя кнопка */
+.blue-button {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+}
+
+.blue-button:hover {
+  background: linear-gradient(135deg, #764ba2, #667eea);
+}
+
+/* Красная кнопка */
+.red-button {
+  background: linear-gradient(135deg, #f093fb, #f5576c);
+}
+
+.red-button:hover {
+  background: linear-gradient(135deg, #f5576c, #f093fb);
+}
+
+/* Кнопка "+" — круглая */
+.home-header .green-button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  padding: 0;
+  font-size: 1.4em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ==================== */
+/* EDIT / LOGIN СТРАНИЦЫ */
+/* ==================== */
+.edit-container,
+.login-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background: white;
+  padding: 24px;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.edit-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.edit-group {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.edit-field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.edit-field label {
+  font-weight: bold;
+  color: #2c3e50;
+  font-size: 0.9em;
+}
+
+.login-title {
+  margin: 0;
+  text-align: center;
+  color: #2c3e50;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.button-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+/* ==================== */
+/* INPUT / TEXTAREA     */
+/* ==================== */
+.basic-input {
+  padding: 10px 14px;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 1em;
+  transition: border-color 0.2s ease;
+  outline: none;
+  background: #fafafa;
+}
+
+.basic-input:focus {
+  border-color: #667eea;
+  background: white;
+}
+
+.basic-input-login {
+  padding: 10px 14px;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 1em;
+  transition: border-color 0.2s ease;
+  outline: none;
+  width: 100%;
+  background: #fafafa;
+}
+
+.basic-input-login:focus {
+  border-color: #667eea;
+  background: white;
+}
+
+textarea.basic-input-login {
+  min-height: 100px;
+  resize: vertical;
+}
+
+textarea.basic-input {
+  min-height: 100px;
+  resize: vertical;
+}
+
+/* ==================== */
+/* ОШИБКИ               */
+/* ==================== */
+.error-message {
+  color: #e74c3c;
+  font-size: 0.8em;
+  font-weight: bold;
+}
+
+/* ==================== */
+/* КНОПКА DELETE        */
+/* ==================== */
+.edit-container>.red-button {
+  width: 100%;
+  margin-top: 8px;
+}
+
+.select-email-token {
+  padding: 10px 8px;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  background: #fafafa;
+  font-family: inherit;
+  font-size: 1em;
+  cursor: pointer;
+  outline: none;
+}
+
+.select-email-token:focus {
+  border-color: #667eea;
+}
+
+.login-option {
+  background: white;
+  color: #2c3e50;
+}

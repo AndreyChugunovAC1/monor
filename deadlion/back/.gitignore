@@ -1,0 +1,10 @@
+# deps
+node_modules/
+
+# secrets
+.env
+data.db
+api.http
+
+# slop
+log.txt

@@ -1,0 +1,10 @@
+# deps
+node_modules/
+node_modules/**
+scripts/
+scripts/**
+files/
+files/**
+
+# slop
+data.db
