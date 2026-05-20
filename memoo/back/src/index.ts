@@ -3,7 +3,6 @@ import { JwtVariables } from 'hono/jwt'
 import { notesRoutes } from './routing/notes';
 import { checkJwt } from './auth/jwt';
 import { authRoutes } from './routing/auth';
-import { serveStatic } from 'hono/bun';
 
 const app = new Hono<{ Variables: JwtVariables<{ id: number }> }>();
 
